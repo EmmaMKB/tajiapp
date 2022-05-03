@@ -624,14 +624,14 @@ p {
         .banner-content-wrapper .banner-content .title {
           font-size: 48px; } }
     .banner-content-wrapper .banner-content p {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 500;
-      line-height: 34px;
+      line-height: 20px;
       margin-top: 35px; }
       @media (max-width: 767px) {
         .banner-content-wrapper .banner-content p {
-          font-size: 16px;
-          line-height: 28px; } }
+          font-size: 14px;
+          line-height: 15px; } }
     .banner-content-wrapper .banner-content .download-btn {
       padding-top: 40px; }
       .banner-content-wrapper .banner-content .download-btn li {
