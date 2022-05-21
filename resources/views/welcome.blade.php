@@ -260,9 +260,14 @@
             <div class="col-lg-6">
                 <div class="comment-form">
                     <h3 class="comment-title">Laissez-nous un message</h3>
-        
+                    @if ($message = Session::get('success'))
+                        <div class="alert alert-success alert-block">
+                            <strong>{{ $message }}</strong>
+                        </div>
+                    @endif
                     <div class="comment-form-wrapper">
-                        <form action="#">
+                        <form method="POST" action="{{ route('contact') }}">
+                            @csrf
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="input-box">
@@ -271,9 +276,14 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="input-box">
-                                        <input type="text" placeholder="Votre adresse mail" name="email">
+                                        <input type="text" placeholder="Votre adresse mail" name="mail">
                                     </div>
-                                </div>                                
+                                </div>           
+                                <div class="col-lg-12">
+                                    <div class="input-box">
+                                        <input type="text" placeholder="Sujet" name="subject">
+                                    </div>
+                                </div>                           
                                 <div class="col-lg-12">
                                     <div class="input-box">
                                         <textarea placeholder="Votre Message" name="message"></textarea>
@@ -281,7 +291,7 @@
                                 </div>
                                 <div class="col-lg-12 text-left">
                                     <div class="input-box">
-                                        <button type="submit" class="main-btn main-btn-2">Submit Comment</button>
+                                        <button type="submit" class="main-btn main-btn-2">Envoyer</button>
                                     </div>
                                 </div>
                             </div>
